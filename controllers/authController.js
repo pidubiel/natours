@@ -72,5 +72,6 @@ exports.protect = catchAsync(async (req, res, next) => {
   }
 
   //GRANT access to portected route.
+  req.user = freshUser;
   next();
 });
